@@ -2,7 +2,7 @@ default: &default
  adapter: postgresql
  encoding: unicode
  username: postgres
- password: wm123
+ password: 123456
 development:
  <<: *default
  database: onebitflix_development
