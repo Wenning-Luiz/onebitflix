@@ -4,8 +4,8 @@ class CreatePlayers < ActiveRecord::Migration[6.1]
       t.datetime :start_date
       t.datetime :end_date
       t.time :elapsed_time
-      t.references :movie, null: false, foreign_key: true
-      t.references :user, null: false, foreign_key: true
+      t.references :movie, foreign_key: true
+      t.references :user, foreign_key: true
 
       t.timestamps
     end

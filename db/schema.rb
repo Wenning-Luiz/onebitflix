@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2021_07_01_232851) do
   create_table "favorites", force: :cascade do |t|
     t.string "favoritable_type", null: false
     t.bigint "favoritable_id", null: false
-    t.bigint "user_id", null: false
+    t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["favoritable_type", "favoritable_id"], name: "index_favorites_on_favoritable"
@@ -63,8 +63,8 @@ ActiveRecord::Schema.define(version: 2021_07_01_232851) do
     t.datetime "start_date"
     t.datetime "end_date"
     t.time "elapsed_time"
-    t.bigint "movie_id", null: false
-    t.bigint "user_id", null: false
+    t.bigint "movie_id"
+    t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["movie_id"], name: "index_players_on_movie_id"
@@ -76,7 +76,7 @@ ActiveRecord::Schema.define(version: 2021_07_01_232851) do
     t.text "description"
     t.string "reviewable_type", null: false
     t.bigint "reviewable_id", null: false
-    t.bigint "user_id", null: false
+    t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["reviewable_type", "reviewable_id"], name: "index_reviews_on_reviewable"
@@ -88,7 +88,7 @@ ActiveRecord::Schema.define(version: 2021_07_01_232851) do
     t.string "title"
     t.text "description"
     t.string "thumbnail_key"
-    t.bigint "category_id", null: false
+    t.bigint "category_id"
     t.string "featured_thumbnail_key"
     t.string "thumbnail_cover_key"
     t.datetime "created_at", precision: 6, null: false
